@@ -6,3 +6,11 @@ exports.getHomePage = (req, res) => {
 
     res.render('home', {cubes});
 };
+
+exports.getAboutPage = (req, res) => {
+    res.render('about')
+}
+
+exports.get404Page = (req, res) => {
+    res.render('404')
+}
