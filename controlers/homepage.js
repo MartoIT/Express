@@ -14,7 +14,7 @@ exports.getHomePage = (req, res) => {
     if(difficultyTo) {
         cubes = cubes.filter(cube => cube.difficultyLevel <= difficultyTo);
     }
-    res.render('home', {cubes, difficultyFrom, difficultyTo});
+    res.render('home', {cubes, search, difficultyFrom, difficultyTo});
 };
 
 exports.getAboutPage = (req, res) => {
