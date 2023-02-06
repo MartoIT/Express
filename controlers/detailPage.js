@@ -1,14 +1,10 @@
-const db = require('../db.json');
+const Cube = require('../Cube/Cube')
 
-exports.getDitails = (req, res) => {
+exports.getDitails = async (req, res) => {
     
-    const id = Number(req.params.cubeId)
+    const cube = await Cube.findById(req.params.cubeId).populate('accessories').lean();
 
-    if(!id) {
-        return res.redirect('/404')
-    }
 
-    let cube = db.cubes.find(x => x.id === id);
     if(!cube){
         return res.redirect('/404')
     }
