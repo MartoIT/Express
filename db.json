@@ -41,6 +41,20 @@
       "imageUrl": "https://images.ctfassets.net/r3qu44etwf9a/2tp1w92TGRKCjGnocx3ZqX/0400ae74b376aa6c9aefa5ca05cc605c/rubiks-hero-banner-mbl.png?w=640&h=450&q=50&fm=png",
       "difficultyLevel": "1",
       "id": 6
+    },
+    {
+      "name": "Standart Rubik cube",
+      "description": "One standart cube.",
+      "imageUrl": "https://i.insider.com/530b7c98eab8eac328f5177b?width=700",
+      "difficultyLevel": "3",
+      "id": 7
+    },
+    {
+      "name": "asdsa",
+      "description": "asdasd",
+      "imageUrl": "https://i.insider.com/530b7c98eab8eac328f5177b?width=700",
+      "difficultyLevel": "1",
+      "id": 8
     }
   ]
 }
