@@ -1,5 +1,5 @@
 const Cube = require('../Cube/Cube');
-const db = require('../db.json');
+
 
 exports.cretePage = (req, res) => {
     res.render('create');
