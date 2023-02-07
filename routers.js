@@ -14,8 +14,9 @@ router.post('/create', create.addCube);
 
 router.get('/details/:cubeId', details.getDitails);
 
-router.get('/create/accessory', accessory.createAccessory);
-router.post('/attach/accessory/:id ', accessory.attach);
+router.get('/create/accessory', accessory.createAccessoryPage);
+router.post('/create/accessory', accessory.createAccessory);
+router.get('/attachAccessory', accessory.attach);
 
 
 // /create/accessory 
