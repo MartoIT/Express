@@ -8,7 +8,7 @@ exports.cretePage = (req, res) => {
 exports.addCube = (req, res) => {
     const {name, description, imageUrl, difficultyLevel} = req.body;
 
-    let cube = new Cube (name, description, imageUrl, difficultyLevel);
+    let cube = new Cube ({name, description, imageUrl, difficultyLevel});
 
     cube.save();
     res.redirect('/')
