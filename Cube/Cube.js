@@ -8,6 +8,7 @@ const cubeSchema = new mongoose.Schema({
     description:{
         type: String,
         required: true,
+        maxLength: 50,
     },
     imageUrl:{
         type: String,
@@ -16,6 +17,8 @@ const cubeSchema = new mongoose.Schema({
     difficultyLevel:{
         type: Number,
         required: true,
+        min:1,
+        max:6,
     }
 })
 
