@@ -22,10 +22,18 @@ exports.attach = async (req, res) =>{//went go to some of products detail page y
     // can see button for add accesory, this function is render static page (just for now)
     // for the product whith posible accesories to be add.
     const cube = await Cube.findById(req.params.cubeId).lean();
-    const accesories = await Accessory.find();
-
-
-    console.log(accesories)
+    const accesories = await Accessory.find().lean();
 
     res.render('attachAccessory', {cube, accesories});
 };
+
+exports.postAtachAccessory = async (req, res) =>{
+    const cube = await Cube.findById(req.params.cubeId);
+    const accessorieId = req.body.accessory;
+    cube.accessories.push(accessorieId);
+
+    await cube.save();
+
+    res.redirect(`/attachAccessory/${cube.id}`);
+
+}
