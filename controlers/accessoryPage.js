@@ -21,7 +21,11 @@ exports.createAccessory = async ( req, res) => {//here add only accesory. To add
 exports.attach = async (req, res) =>{//went go to some of products detail page you
     // can see button for add accesory, this function is render static page (just for now)
     // for the product whith posible accesories to be add.
-    const cube = await Cube.findById
+    const cube = await Cube.findById(req.params.cubeId).lean();
+    const accesories = await Accessory.find();
 
-    res.render('attachAccessory');
+
+    console.log(accesories)
+
+    res.render('attachAccessory', {cube, accesories});
 };
