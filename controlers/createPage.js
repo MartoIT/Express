@@ -13,3 +13,4 @@ exports.addCube = (req, res) => {
     cube.save();
     res.redirect('/')
 }
+

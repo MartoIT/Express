@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Accessory = new mongoose.Schema({
+const AccessorySchema = new mongoose.Schema({
     name:{
         type: String,
         required: true,
@@ -15,12 +15,9 @@ const Accessory = new mongoose.Schema({
         required: true,
         maxLength: 50,
     }
-    
+
 })
 
+const Accessory = mongoose.model('Accessory', AccessorySchema);
 
-// •	Id - (ObjectId)
-// •	Name - (String, required)
-// •	ImageUrl - (String, required, http/https validation)
-// •	Description - (String, required, max length validation)
-// •	Cubes - (ObjectId, ref Cubes Model)
+module.exports = Accessory;
