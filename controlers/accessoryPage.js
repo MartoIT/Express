@@ -22,7 +22,7 @@ exports.attach = async (req, res) =>{//went go to some of products detail page y
     // can see button for add accesory, this function is render static page (just for now)
     // for the product whith posible accesories to be add.
     const cube = await Cube.findById(req.params.cubeId).lean();
-    const accesories = await Accessory.find().lean();
+    const accesories = await Accessory.find({ _id: { $nin: cube.accessories }}).lean();
 
     res.render('attachAccessory', {cube, accesories});
 };
