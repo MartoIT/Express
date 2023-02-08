@@ -3,7 +3,7 @@ const Accessory = require('../Cube/Accessory')
 
 exports.getDitails = async (req, res) => {
     
-    const cube = await Cube.findById(req.params.cubeId).lean();
+    const cube = await Cube.findById(req.params.cubeId).populate('accessories').lean();
     //populate('Accessory')
 
     if(!cube){
