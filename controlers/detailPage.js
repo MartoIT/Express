@@ -15,5 +15,5 @@ exports.getDitails = async (req, res) => {
 }
 
 exports.getEditPage = async (req, res) => {
-    res.render('/edit')
+    res.render('edit')
 }
