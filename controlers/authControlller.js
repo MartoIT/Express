@@ -1,4 +1,4 @@
-const User = require('../Models/User');
+
 const router = require('express').Router();
 
 const authService = require('../services/authService');
