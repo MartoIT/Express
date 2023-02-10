@@ -19,7 +19,8 @@ exports.postRegisterUser = async (req, res) => {
         res.redirect('/404');
     };
 
-    await authService.register(username, password)
+    const token =  await authService.register(username, password)
+    res.cookie('auth', token, { httpOnly: true });
 
     res.redirect('/');
 }

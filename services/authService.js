@@ -4,7 +4,13 @@ const jwt = require('../lib/jsonwebtoken')
 
 exports.getUserByUsername = (username) => User.findOne({ username }) ;
 
-exports.register = (username, password) => User.create({username, password});
+exports.register =async (username, password) =>{
+    const user = await User.create({username, password});
+    const payload = { _id: user._id, username: user.username };
+    const token = await jwt.sign(payload, 'secret', { expiresIn: '2h' });
+
+    return token;
+} 
 
 
 exports.login =  async (username, password) =>{
