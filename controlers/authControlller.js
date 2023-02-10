@@ -5,10 +5,16 @@ const authService = require('../services/authService');
 
 exports.getRegisterPage = (req, res) => {
     res.render('register')
-}
+};
 
 exports.getLoginPage = (req, res) => {
     res.render('login')
+};
+
+exports.logout = (req, res) => {
+    res.clearCookie('auth');
+
+    res.redirect('/')
 }
 
 exports.postRegisterUser = async (req, res) => {
