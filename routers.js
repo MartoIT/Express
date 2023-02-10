@@ -24,6 +24,7 @@ router.get('/register', authentication.getRegisterPage);
 router.get('/login', authentication.getLoginPage);
 router.get('/logout', authentication.logout);
 router.post('/register', authentication.postRegisterUser);
+router.post('/login', authentication.postLoginPage);
 
 
 module.exports = router;
