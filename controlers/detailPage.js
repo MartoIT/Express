@@ -1,5 +1,5 @@
-const Cube = require('../Cube/Cube')
-const Accessory = require('../Cube/Accessory')
+const Cube = require('../Models/Cube')
+const Accessory = require('../Models/Accessory')
 
 exports.getDitails = async (req, res) => {
     

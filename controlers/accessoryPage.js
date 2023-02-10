@@ -1,5 +1,5 @@
-const Accessory = require('../Cube/Accessory');
-const Cube = require('../Cube/Cube');
+const Accessory = require('../Models/Accessory');
+const Cube = require('../Models/Cube');
 
 exports.createAccessoryPage = (req, res) => {//here show the page taht give you options to add new accessory.
     res.render('accessoryCreate')

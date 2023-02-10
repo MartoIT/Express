@@ -1,4 +1,4 @@
-const Cube = require('../Cube/Cube')
+const Cube = require('../Models/Cube')
 
 exports.getHomePage = async (req, res) => {
     const {search, from: difficultyFrom, to: difficultyTo} =  req.query;

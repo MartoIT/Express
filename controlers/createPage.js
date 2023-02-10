@@ -1,4 +1,4 @@
-const Cube = require('../Cube/Cube');
+const Cube = require('../Models/Cube');
 
 
 exports.cretePage = (req, res) => {
