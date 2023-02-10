@@ -13,3 +13,7 @@ exports.getDitails = async (req, res) => {
     res.render('details', { cube })
 
 }
+
+exports.getEditPage = async (req, res) => {
+    res.render('/edit')
+}
