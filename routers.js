@@ -21,6 +21,7 @@ router.get('/attachAccessory/:cubeId', accessory.attach);
 router.post('/attachAccessory/:cubeId', accessory.postAtachAccessory);
 
 router.get('/register', authentication.getRegisterPage);
+router.get('/login', authentication.getLoginPage);
 router.post('/register', authentication.postRegisterUser);
 
 

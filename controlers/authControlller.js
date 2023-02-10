@@ -7,6 +7,10 @@ exports.getRegisterPage = (req, res) => {
     res.render('register')
 }
 
+exports.getLoginPage = (req, res) => {
+    res.render('login')
+}
+
 exports.postRegisterUser = async (req, res) => {
     const { username, password, repeatPassword } = req.body;
 
