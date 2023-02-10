@@ -16,4 +16,8 @@ exports.getDitails = async (req, res) => {
 
 exports.getEditPage = async (req, res) => {
     res.render('edit')
-}
+};
+
+exports.getDeletePage = async (req, res) => {
+    res.render('delete')
+};

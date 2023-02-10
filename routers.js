@@ -26,7 +26,8 @@ router.get('/logout', authentication.logout);
 router.post('/register', authentication.postRegisterUser);
 router.post('/login', authentication.postLoginPage);
 
-router.get('/edit', details.getEditPage)
+router.get('/edit', details.getEditPage);
+router.get('/delete', details.getDeletePage);
 
 
 module.exports = router;
