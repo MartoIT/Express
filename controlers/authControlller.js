@@ -46,7 +46,6 @@ exports.postLoginPage = async (req, res) => {
 }
 
 
-
 exports.logout = (req, res) => {
     res.clearCookie('auth');
 
